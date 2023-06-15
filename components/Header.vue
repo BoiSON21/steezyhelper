@@ -29,7 +29,7 @@ const stanceOptions = [
 ]
 
 const obstaclesLabel = "Obstacles";
-const obstaclesValue = ref([]);
+const obstaclesValue = ref(['flat', 'ledge', 'rail', 'gap', 'stair', 'manual', 'transition']);
 
 const obstacleOptions = [
     { value: 'flat', label: 'flat' },
