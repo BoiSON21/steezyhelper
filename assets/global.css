@@ -66,8 +66,11 @@ footer {
     .el-select {
         width: 50vw;
     }
-    footer {
+    /* footer {
         height: 10px;
         font-size: 2pt;
+    } */
+    footer {
+        display: none;
     }
 }
