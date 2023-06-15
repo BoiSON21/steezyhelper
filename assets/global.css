@@ -25,11 +25,20 @@ footer {
 
 .content {
     text-align: center;
+    font-size: 10pt;
+    margin: 0px !important;
+}
+
+.selected-trick {
+    font-size: 16pt;
     margin: 0px !important;
 }
 
 .trick-name {
-    font-size: 20pt;
+    font-size: 16pt;
+    background: -webkit-linear-gradient(#eef3f3, purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .heading {
