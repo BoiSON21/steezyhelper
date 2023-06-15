@@ -76,7 +76,7 @@ export default {
             });
 
             const selectedTrick = filteredTricks[Math.floor(Math.random() * filteredTricks.length)];
-            const side = selectedTrick.noSides? "" : Math.random() < 0.5? "frontside " : "backside ";
+            const side = selectedTrick.noSides? "" : Math.random() < 0.3? "frontside " :  Math.random() < 0.3? "backside " : "";
             const trickToDo = {
                 name: stance + " " + side + selectedTrick.name + " on " + obstacle,
                 description: selectedTrick.description,
