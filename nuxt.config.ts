@@ -4,13 +4,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@element-plus/nuxt'],
   css: ['~/assets/global.css'],
-  app: {
-    baseUrl: '/steezyhelper/',
-  },
   router: {
-    base: '/steezyhelper/'
+    base: process.env.NODE_ENV === 'production' ? '/steezyhelper/' : '/'
   },
   build: {
-    publicPath: '/steezyhelper/_nuxt/'
+    publicPath: process.env.NODE_ENV === 'production' ? '/steezyhelper/_nuxt/' : '/_nuxt/'
   },
 })
