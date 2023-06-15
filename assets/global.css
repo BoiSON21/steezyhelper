@@ -1,0 +1,64 @@
+@font-face {
+    font-family: "HelveticaNeueBlack";
+    src: local("HelveticaNeueBlack"), url(assets/fonts/HelveticaNeueBlack/HelveticaNeueBlack.ttf) format("truetype");
+}
+
+body {
+    font-family: "HelveticaNeueBlack", sans-serif;
+    background: #000000;
+    color: #ffffff;
+    width:90vw;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+header, footer {
+    text-align: center;
+}
+
+footer {
+    bottom: 0;
+    height: 100px;
+    position: absolute;
+    width: 90vw;
+}
+
+.content {
+    text-align: center;
+    margin: 0px !important;
+}
+
+.trick-name {
+    font-size: 20pt;
+}
+
+.heading {
+    text-shadow: -2px 2px 0px black, -4px 4px 0px white, -6px 6px 0px purple;
+}
+
+.multiselects {
+    margin: 0px 0px 25px 0px;
+}
+
+.multiselect p {
+    margin: 20px 0px 5px 0px;
+}
+
+.el-button {
+    font-family: "HelveticaNeueBlack", sans-serif;
+}
+
+.el-select {
+    font-family: "HelveticaNeueBlack", sans-serif;
+    width: 30vw;
+}
+
+@media (max-width: 768px) {
+    .el-select {
+        width: 50vw;
+    }
+    footer {
+        height: 10px;
+        font-size: 2pt;
+    }
+}

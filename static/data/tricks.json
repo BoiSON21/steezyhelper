@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Ollie",
+        "description": "a ollie is a trick where you pop the board up, drag your foot up the board, and land back on the board",
+        "level": "beginner",
+        "noSides": true
+    },
+    {
+        "name": "Pop Shuvit",
+        "description": "a pop shuvit is a trick where you pop the board up, drag your foot up the board, and flick your foot off the back of the board",
+        "level": "beginner"
+    },
+    {
+        "name": "Ollie 180",
+        "description": "a ollie 180 is a trick where you pop the board up, drag your foot up the board, and land back on the board while turning your body 180 degrees forward",
+        "level": "beginner"
+    },
+    {
+        "name": "360 Pop Shuvit",
+        "description": "a 360 pop shuvit is the same as a pop shuvit but with a extra spin",
+        "level": "intermediate"
+    },
+    {
+        "name": "Heelflip",
+        "description": "a heelflip is a trick where you pop the board up, drag your foot up the board, and flick your foot off the front of the board",
+        "level": "intermediate"
+    },
+    {
+        "name": "Kickflip",
+        "description": "a kickflip is a trick where you pop the board up, drag your foot up the board, and flick your foot off the side of the board",
+        "level": "intermediate"
+    },
+    {
+        "name": "Varial Kickflip",
+        "description": "a varial kickflip is the combination of a pop shuvit and a kickflip",
+        "level": "intermediate",
+        "noSides": true
+    },
+    {
+        "name": "Varial Heelflip",
+        "description": "a varial heelflip is the combination of a front pop shuvit and a heelflip",
+        "level": "intermediate",
+        "noSides": true
+    },
+    {
+        "name": "Big Spin",
+        "description": "a big spin is the combination of 360 pop shuvit and a body varial in the same direction",
+        "level": "intermediate"
+    },
+    {
+        "name": "360 Flip/Tre Flip",
+        "description": "a 360 flip is the combination of a backside 360 pop shuvit and a kickflip",
+        "level": "advanced",
+        "noSides": true
+    },
+    {
+        "name": "Laser Flip",
+        "description": "a laser flip is the combination of a frontside 360 pop shuvit and a heelflip",
+        "level": "advanced",
+        "noSides": true
+    },
+    {
+        "name": "Hardflip",
+        "description": "a hardflip is the combination of a frontside pop shuvit and a kickflip",
+        "level": "advanced",
+        "noSides": true
+    },
+    {
+        "name": "Inward Heelflip",
+        "description": "a inward heelflip is the combination of a backside pop shuvit and a heelflip",
+        "level": "advanced",
+        "noSides": true
+    }
+]

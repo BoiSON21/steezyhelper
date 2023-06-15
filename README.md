@@ -2,8 +2,12 @@
 
 a skateboarding webapp to make your next trick selection easier
 
-## Setup
+## Tech Stack
+*   Node.js
+*   Nuxt.js V3.5.2
+*   [ElementPlus](https://element-plus.org/en-US/) (Component Library)
 
+## Setup
 Make sure to install the dependencies:
 
 ```bash
