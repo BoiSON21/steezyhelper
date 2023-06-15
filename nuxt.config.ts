@@ -5,9 +5,9 @@ export default defineNuxtConfig({
   modules: ['@element-plus/nuxt'],
   css: ['~/assets/global.css'],
   router: {
-    base: process.env.NODE_ENV === 'production' ? '/steezyhelper/' : '/'
+    base: '/steezyhelper/'
   },
   build: {
-    publicPath: process.env.NODE_ENV === 'production' ? '/steezyhelper/_nuxt/' : '/_nuxt/'
+    publicPath: '/steezyhelper/_nuxt/'
   },
 })
