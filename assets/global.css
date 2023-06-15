@@ -35,7 +35,7 @@ footer {
 }
 
 .trick-name {
-    font-size: 16pt;
+    font-size: 24pt;
     background: -webkit-linear-gradient(#eef3f3, purple);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
