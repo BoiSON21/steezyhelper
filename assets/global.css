@@ -62,9 +62,14 @@ footer {
     width: 30vw;
 }
 
+.el-scrollbar__bar {
+    opacity: 1!important;
+}
+
 @media (max-width: 768px) {
     .el-select {
         width: 50vw;
+        opacity: 1 !important;
     }
     /* footer {
         height: 10px;
