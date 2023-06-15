@@ -8,7 +8,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "predeploy": "nuxt generate",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages --dotfiles -d .output/public"
   },
   "devDependencies": {
     "@element-plus/nuxt": "^1.0.5",
