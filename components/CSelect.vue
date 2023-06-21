@@ -8,7 +8,7 @@
             :options="options"
             :close-on-select="false"
             :searchable="true"
-            :create-option="true"
+            :create-option="false"
             class="multiselect"
         />
     </div>
