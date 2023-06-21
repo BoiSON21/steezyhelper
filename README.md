@@ -10,58 +10,30 @@ a skateboarding webapp to make your next trick selection easier
 ## Setup
 Make sure to install the dependencies:
 
-```bash
-# npm
+```sh
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
 ```
 
 ## Development Server
 
 Start the development server on `http://localhost:3000`:
 
-```bash
-# npm
+```sh
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
 ```
 
-## Production
+## Deployment on Github Pages
+This project is deployed on [Github Pages](https://pages.github.com/). The production site is located at [https://boison21.github.io/steezyhelper/](https://boison21.github.io/steezyhelper/).
 
-Build the application for production:
+## Vercel
+This project is hosted on [Vercel](https://vercel.com/). The production site is located at [https://steezyhelper.vercel.app/](https://steezyhelper.vercel.app/).
+Every push to the `main` branch will trigger a new deployment.
 
-```bash
-# npm
-npm run build
+### Pull Requests
+Every branch will be deployed to a preview environment. The link to the preview environment will be posted in the pull request.
 
-# pnpm
-pnpm run build
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-# yarn
-yarn build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
