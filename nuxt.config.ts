@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   app: {
     baseURL: isGitHubPages? baseUrl : '/',
     head: {
-      link: [{ rel: 'icon', type: 'image/png', href: '/steezyhelper/favicon.ico' }]
+      link: [{ rel: 'icon', type: 'image/png', href: isGitHubPages? baseUrl + 'favicon.ico' : '/favicon.ico' }]
     }
   },
 })
