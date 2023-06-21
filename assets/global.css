@@ -1,3 +1,10 @@
+:root {
+    --sh-button-primary-bg: #e6a23c;
+    --sh-optional-ft-color: #553d5b;
+    --sh-primary-bg-color: #514141;
+    --sh-primary-ft-color: #ffffff;
+}
+
 @font-face {
     font-family: "HelveticaNeueBlack";
     src: local("HelveticaNeueBlack"), url(assets/fonts/HelveticaNeueBlack/HelveticaNeueBlack.ttf) format("truetype");
@@ -5,8 +12,8 @@
 
 body {
     font-family: "HelveticaNeueBlack", sans-serif;
-    background: #000000;
-    color: #ffffff;
+    background: var(--sh-primary-bg-color);
+    color: var(--sh-primary-ft-color);
     width:90vw;
     margin-left:auto;
     margin-right:auto;
@@ -35,40 +42,43 @@ footer {
 }
 
 .trick-name {
-    font-size: 16pt;
-    background: -webkit-linear-gradient(#eef3f3, purple);
+    font-size: 20pt;
+    background: var(--sh-button-primary-bg);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .heading {
-    text-shadow: -2px 2px 0px black, -4px 4px 0px white, -6px 6px 0px purple;
+    text-shadow: -2px 2px 0px black, -4px 4px 0px var(--sh-optional-ft-color), -6px 6px 0px rgb(180, 83, 166);
 }
 
 .multiselects {
     margin: 0px 0px 25px 0px;
 }
 
-.multiselect p {
+.cselect p {
     margin: 20px 0px 5px 0px;
 }
 
 .el-button {
     font-family: "HelveticaNeueBlack", sans-serif;
+    color: var(--sh-optional-ft-color) !important;
 }
 
-.el-select {
-    font-family: "HelveticaNeueBlack", sans-serif;
-    width: 30vw;
+.multiselect {
+    font-family: "HelveticaNeueBlack", sans-serif !important;
+    color: black;
+    width: 50vw !important;
 }
 
-.el-scrollbar__bar {
-    opacity: 1!important;
+.multiselect-tag {
+    color: var(--sh-optional-ft-color) !important;
+    --ms-tag-bg: var(--sh-button-primary-bg) !important;
 }
 
 @media (max-width: 768px) {
-    .el-select {
-        width: 50vw;
+    .multiselect {
+        width: 80vw !important;
         opacity: 1 !important;
     }
     /* footer {
