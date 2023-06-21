@@ -4,9 +4,9 @@
         <p>Steezy Helper helps you finding your next skateboarding trick to try</p>
 
         <div class="multiselects">
-            <Multiselect id="stances" :label="stancesLabel" v-model:value="stancesValue" :options="stanceOptions" />
-            <Multiselect id="obstacles" :label="obstaclesLabel" v-model:value="obstaclesValue" :options="obstacleOptions" />
-            <Multiselect id="levels" :label="levelsLabel" v-model:value="levelsValue" :options="levelOptions" />
+            <CSelect id="stances" :label="stancesLabel" v-model:value="stancesValue" :options="stanceOptions" />
+            <CSelect id="obstacles" :label="obstaclesLabel" v-model:value="obstaclesValue" :options="obstacleOptions" />
+            <CSelect id="levels" :label="levelsLabel" v-model:value="levelsValue" :options="levelOptions" />
         </div>
 
         <el-button type="warning" @click="() => clickHandler(stancesValue, obstaclesValue, levelsValue)">GET YOUR TRICK</el-button>
