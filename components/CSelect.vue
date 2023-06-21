@@ -45,3 +45,26 @@ export default {
 </script>
 
 <style src="@vueform/multiselect/themes/default.css"></style>
+<style>
+.cselect p {
+    margin: 20px 0px 5px 0px;
+}
+
+.multiselect {
+    font-family: "HelveticaNeueBlack", sans-serif !important;
+    color: black;
+    width: 50vw !important;
+}
+
+.multiselect-tag {
+    color: var(--sh-optional-ft-color) !important;
+    --ms-tag-bg: var(--sh-button-primary-bg) !important;
+}
+
+@media (max-width: 768px) {
+    .multiselect {
+        width: 80vw !important;
+        opacity: 1 !important;
+    }
+}
+</style>

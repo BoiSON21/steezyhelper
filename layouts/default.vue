@@ -2,7 +2,7 @@
     <div>
         <Header @trick-calculated="updateTrick" />
         <slot />
-        <TrickDisplay :trick="calculatedTrick" />
+        <TrickDisplay :trick="calculatedTrick" class="content"/>
         <Footer />
     </div>
 </template>
@@ -29,3 +29,11 @@ export default {
     }
 }
 </script>
+
+<style>
+.content {
+    text-align: center;
+    font-size: 10pt;
+    margin: 0px !important;
+}
+</style>
