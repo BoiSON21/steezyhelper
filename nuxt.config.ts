@@ -5,5 +5,8 @@ export default defineNuxtConfig({
   css: ['~/assets/global.css'],
   app: {
     baseURL: '/steezyhelper/',
-  }
+    head: {
+      link: [{ rel: 'icon', type: 'image/png', href: '/steezyhelper/favicon.ico' }]
+    }
+  },
 })
