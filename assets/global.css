@@ -14,9 +14,9 @@ body {
     font-family: "HelveticaNeueBlack", sans-serif;
     background: var(--sh-primary-bg-color);
     color: var(--sh-primary-ft-color);
-    width:90vw;
-    margin-left:auto;
-    margin-right:auto;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 header, footer {
@@ -24,40 +24,7 @@ header, footer {
 }
 
 footer {
-    bottom: 0;
     height: 100px;
-    position: absolute;
-    width: 90vw;
-}
-
-.content {
-    text-align: center;
-    font-size: 10pt;
-    margin: 0px !important;
-}
-
-.selected-trick {
-    font-size: 16pt;
-    margin: 0px !important;
-}
-
-.trick-name {
-    font-size: 20pt;
-    background: var(--sh-button-primary-bg);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.heading {
-    text-shadow: -2px 2px 0px black, -4px 4px 0px var(--sh-optional-ft-color), -6px 6px 0px rgb(180, 83, 166);
-}
-
-.multiselects {
-    margin: 0px 0px 25px 0px;
-}
-
-.cselect p {
-    margin: 20px 0px 5px 0px;
 }
 
 .el-button {
@@ -65,26 +32,7 @@ footer {
     color: var(--sh-optional-ft-color) !important;
 }
 
-.multiselect {
-    font-family: "HelveticaNeueBlack", sans-serif !important;
-    color: black;
-    width: 50vw !important;
-}
-
-.multiselect-tag {
-    color: var(--sh-optional-ft-color) !important;
-    --ms-tag-bg: var(--sh-button-primary-bg) !important;
-}
-
 @media (max-width: 768px) {
-    .multiselect {
-        width: 80vw !important;
-        opacity: 1 !important;
-    }
-    /* footer {
-        height: 10px;
-        font-size: 2pt;
-    } */
     footer {
         display: none;
     }

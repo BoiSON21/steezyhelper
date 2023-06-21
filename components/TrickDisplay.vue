@@ -1,5 +1,5 @@
 <template>
-    <div class="content trick">
+    <div class="trick">
       <div class="selected-trick">Your trick: 
         <div class="trick-name"> {{ Object.keys(trick).length > 0? trick.name : "" }} </div>
       </div>
@@ -21,3 +21,17 @@ props: {
 }
 }
 </script>
+
+<style>
+.selected-trick {
+    font-size: 16pt;
+    margin: 0px !important;
+}
+
+.trick-name {
+    font-size: 20pt;
+    background: var(--sh-button-primary-bg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+</style>
