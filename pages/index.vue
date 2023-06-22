@@ -2,7 +2,7 @@
     <div>
         <TrickSelection @trick-calculated="updateTrick" />
         <p>Trust the process <br/> Learning to skate is hard</p>
-        <TrickDisplay :trick="calculatedTrick"/>
+        <TrickDisplay :trick="calculatedTrick" :key="calculatedTrick.name"/>
     </div>
 </template>
 
@@ -17,13 +17,21 @@ export default {
         TrickDisplay
     },
     data() {
-    return {
-      calculatedTrick: {} as Trick
-    };
+        return {
+        calculatedTrick: {} as Trick
+        };
     },
     methods: {
         updateTrick(trick: Trick) {
-        this.calculatedTrick = trick;
+            this.calculatedTrick = trick;
+            this.$nextTick(() => {
+                if (window.innerWidth <= 768) {
+                    const trickDisplayElement = document.querySelector('.trick-display');
+                    if (trickDisplayElement) {
+                        trickDisplayElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
         }
     }
 }
