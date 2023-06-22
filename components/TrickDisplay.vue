@@ -1,6 +1,6 @@
 <template>
-    <div class="trick">
-      <div class="selected-trick">Your trick: 
+    <div class="trick-display">
+      <div class="trick-selected">Your trick: 
         <div class="trick-name"> {{ Object.keys(trick).length > 0? trick.name : "" }} </div>
       </div>
       <p>{{ Object.keys(trick).length > 0? trick.description : "" }}</p>
@@ -23,7 +23,13 @@ props: {
 </script>
 
 <style>
-.selected-trick {
+.trick-display {
+    text-align: center;
+    font-size: 10pt;
+    margin: 0px !important;
+}
+
+.trick-selected {
     font-size: 16pt;
     margin: 0px !important;
 }
