@@ -35,5 +35,20 @@ Every branch will be deployed to a preview environment. The link to the preview 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+To contribute to this project, please follow these steps:
+*   Clone this repository.
+*   Switch to the `dev` branch.
+*   Create a new branch with a descriptive name.
+*   Make your changes.
+*   Commit your changes.
+*   Push to the branch.
+*   Create a new pull request.
+
+Naming convention for branches:
+*   `feature/<name>` for new features
+*   `fix/<name>` for bug fixes
+*   `refactor/<name>` for refactoring
+*   `chore/<name>` for other changes
+
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

@@ -18,36 +18,37 @@
 import { ref } from 'vue';
 
 const stancesLabel = "Stances";
-const stancesValue = ref(['regular', 'fakie', 'switch', 'nollie']);
+const stancesValue = ref(['Regular', 'Fakie', 'Switch', 'Nollie']);
 
 const stanceOptions = [
-    { value: 'regular', label: 'regular' },
-    { value: 'fakie', label: 'fakie' },
-    { value: 'switch', label: 'switch' },
-    { value: 'nollie', label: 'nollie' }
+    { value: 'Regular', label: 'Regular' },
+    { value: 'Fakie', label: 'Fakie' },
+    { value: 'Switch', label: 'Switch' },
+    { value: 'Nollie', label: 'Nollie' }
     
 ]
 
 const obstaclesLabel = "Obstacles";
-const obstaclesValue = ref(['flat', 'ledge', 'rail', 'gap', 'stair', 'manual', 'transition']);
+const obstaclesValue = ref(['on Flat']);
 
 const obstacleOptions = [
-    { value: 'flat', label: 'flat' },
-    { value: 'ledge', label: 'ledge' },
-    { value: 'rail', label: 'rail' },
-    { value: 'gap', label: 'gap' },
-    { value: 'stair', label: 'stair' },
-    { value: 'manual', label: 'manual' },
-    { value: 'transition', label: 'transition' }
+    { value: 'on Flat', label: 'Flat' },
+    { value: 'on a Ledge', label: 'Ledge' },
+    { value: 'on a Rail', label: 'Rail' },
+    { value: 'over a Gap', label: 'Gap' },
+    { value: 'on Stairs', label: 'Stairs' },
+    { value: 'on a Manual Pad', label: 'Manual Pad' },
+    { value: 'on a Hubba', label: 'Hubba' },
+    { value: 'over a Hip', label: 'Hip' }
 ]
 
 const levelsLabel = "Levels";
 const levelsValue = ref([]);
 
 const levelOptions = [
-    { value: 'beginner', label: 'beginner' },
-    { value: 'intermediate', label: 'intermediate' },
-    { value: 'advanced', label: 'advanced' }
+    { value: 'Beginner', label: 'Beginner' },
+    { value: 'Intermediate', label: 'Intermediate' },
+    { value: 'Advanced', label: 'Advanced' }
 ]
 </script>
 
@@ -59,26 +60,23 @@ export default {
     methods: {
         clickHandler(stances: string[], obstacles: string[], levels: string[]) {
             let stance: string, obstacle: string, level: string | null;
-            if (stances.length > 0) {
-                stance = stances[Math.floor(Math.random() * stances.length)];
-            } else {
-                return;
-            }
-            obstacle = obstacles.length > 0? obstacles[Math.floor(Math.random() * obstacles.length)] : "flat";
+            stance = stances.length > 0 ? stances[Math.floor(Math.random() * stances.length)] : "Regular";
+
+            obstacle = obstacles.length > 0? obstacles[Math.floor(Math.random() * obstacles.length)] : "on Flat";
             level = levels.length > 0? levels[Math.floor(Math.random() * levels.length)] : null;
 
             const tricks = data as Trick[];
             const filteredTricks = tricks.filter(trick => {
-                if (level !== null && level !== trick.level) {
+                if (level !== null && level.toLocaleLowerCase() !== trick.level.toLocaleLowerCase()) {
                     return false;
                 }
                 return true;
             });
 
             const selectedTrick = filteredTricks[Math.floor(Math.random() * filteredTricks.length)];
-            const side = selectedTrick.noSides? "" : Math.random() < 0.3? "frontside " :  Math.random() < 0.3? "backside " : "";
+            const side = selectedTrick.noSides? "" : Math.random() < 0.3? "Frontside " :  Math.random() < 0.5? "Backside " : "";
             const trickToDo = {
-                name: stance + " " + side + selectedTrick.name + " on " + obstacle,
+                name: stance + " " + side + selectedTrick.name + " " + obstacle,
                 description: selectedTrick.description,
                 level: selectedTrick.level
             };

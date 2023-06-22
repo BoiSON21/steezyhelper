@@ -8,7 +8,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "predeploy": "nuxt generate",
-    "deploy": "DEPLOY_ENV=GH_PAGES nuxt generate && touch .output/public/.nojekyll && gh-pages --dotfiles -d .output/public"
+    "deploy": "DEPLOY_ENV=GH_PAGES BASE_URL=/steezyhelper/ nuxt generate && touch .output/public/.nojekyll && gh-pages --dotfiles -d .output/public"
   },
   "devDependencies": {
     "@element-plus/nuxt": "^1.0.5",
