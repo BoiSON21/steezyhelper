@@ -1,20 +1,21 @@
 <template>
     <div>
-        <Header @trick-calculated="updateTrick" />
+        <Header />
+        <TrickSelection @trick-calculated="updateTrick" />
         <slot />
-        <TrickDisplay :trick="calculatedTrick" class="content"/>
+        <TrickDisplay :trick="calculatedTrick"/>
         <Footer />
     </div>
 </template>
 
 <script lang="ts">
-import Header from '~/components/Header.vue';
 import TrickDisplay from '~/components/TrickDisplay.vue';
+import TrickSelection from '~/components/TrickSelection.vue';
 import { Trick } from '~/types/types';
 
 export default {
     components: {
-        Header,
+        TrickSelection,
         TrickDisplay
     },
     data() {
