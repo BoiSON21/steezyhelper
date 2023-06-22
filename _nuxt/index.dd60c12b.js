@@ -1,1 +1,0 @@
-import{a as s,b as o,o as c,e,f as t}from"./entry.4b519dd8.js";const n={},a={class:"content"},r=e("p",null,[t("Trust the process "),e("br"),t(" Learning to skate is hard")],-1),_=[r];function d(i,f){return c(),o("div",a,_)}const h=s(n,[["render",d]]);export{h as default};
