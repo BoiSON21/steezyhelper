@@ -75,7 +75,8 @@ export default {
             const trickToDo = {
                 name: stance + " " + side + selectedTrick.name + " " + obstacle,
                 description: selectedTrick.description,
-                level: selectedTrick.level
+                level: selectedTrick.level,
+                mentions: selectedTrick.mentions,
             };
 
             this.$emit('trick-calculated', trickToDo);
