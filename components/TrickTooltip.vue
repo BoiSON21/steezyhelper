@@ -30,7 +30,7 @@ export default {
 .trick-tooltip__title {
     background-color: var(--sh-button-primary-bg);
     color: var(--sh-optional-ft-color);
-    padding: 5px;
+    padding: 4px 8px;
     border-radius: 10px;
 }
 </style>
