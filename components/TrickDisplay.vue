@@ -23,8 +23,6 @@ import data from '~/static/data/tricks.json';
 export default {
     methods: {
         splitDescription(description: string) {
-            console.log(description);
-            console.log(this.trickList)
             if(description === undefined){
                 return [];
             }
