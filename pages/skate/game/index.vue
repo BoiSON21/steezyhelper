@@ -151,6 +151,13 @@ export default {
 }
 
 .el-table {
-    font-size: 12pt;
+    font-size: 10pt;
+}
+
+@media screen and (max-width: 768px) {
+    .el-table .el-button {
+        margin: 0px 2px;
+        width: 40px;
+    }   
 }
 </style>

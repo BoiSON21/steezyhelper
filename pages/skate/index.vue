@@ -11,8 +11,7 @@
         
         <p>Who is playing?</p>
         <el-input v-model="playerName" placeholder="" @keyup.enter="addPlayer"></el-input>
-        <el-button type="warning" @click="addPlayer">ADD PLAYER</el-button>
-    
+
         <el-table stripe :data="players" max-height="250" empty-text="no players yet">
             <el-table-column prop="name" label="Name"></el-table-column>
             <el-table-column label="" fixed="right" width="50">
