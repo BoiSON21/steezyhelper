@@ -23,7 +23,7 @@ export function getTrick(stances: string[], obstacles: string[], levels: string[
         description: selectedTrick.description,
         level: selectedTrick.level,
         mentions: selectedTrick.mentions,
-    };
+    } as Trick;
 
     return trickToDo;
 }

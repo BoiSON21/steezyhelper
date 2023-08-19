@@ -12,16 +12,9 @@
             <p>If you want to swap the trick press this button</p>
             <el-button type="warning" @click="newTrick">GET NEW TRICK</el-button>
             <el-divider border-style="dashed" />
-            <el-table :data="data" stripe empty-text="no players yet">
-                <el-table-column label="Name" prop="name"></el-table-column>
-                <el-table-column label="Letters" prop="letters"></el-table-column>
-                <el-table-column label="" fixed="right" width="150">
-                    <template #default="scope">
-                        <el-button type="primary" size="small" @click="itsAMake(scope.$index)" v-if="!scope.row.hasTried">Make</el-button>
-                        <el-button type="danger" size="small" @click="itsAMiss(scope.$index)" v-if="!scope.row.hasTried">Miss</el-button>
-                    </template>
-                </el-table-column>
-            </el-table>
+            <transition name="slide" mode="out-in">
+                <PlayerMissMakeCard v-if="data.length > 0" :key="currentPlayer" :player="data[currentPlayer]" @miss="itsAMiss" @make="itsAMake" style="margin-top: 10px;"/>
+            </transition>
         </div>
         <div v-else>
             <h2>Game Over!</h2>
@@ -33,25 +26,28 @@
 </template>
 
 <script lang="ts">
-import { Trick } from '@/types/types';
+import { Trick, SkatePlayer } from '@/types/types';
 import { getTrick } from '@/utils/functions';
 import TrickDisplay from '~/components/TrickDisplay.vue';
+import PlayerMissMakeCard from '~/components/PlayerMissMakeCard.vue';
 
 const letters = ['S', 'K', 'A', 'T', 'E'];
 
 export default {
     components: {
-        TrickDisplay
+        TrickDisplay,
+        PlayerMissMakeCard
     },
     data() {
         return {
-            data: [] as { name: string, letters: string, letterCount: number, hasTried: boolean, isOut: boolean }[],
+            data: [] as SkatePlayer[],
             players: [] as { name: string }[],
             stances: [] as string[],
             obstacles: [] as string[],
             levels: [] as string[],
             currentTrick: {} as Trick,
-            gameWinner: '' as string
+            currentPlayer: 0 as number,
+            gameWinner: '' as string,
         }
     },
     mounted() {
@@ -73,20 +69,20 @@ export default {
         this.currentTrick = getTrick(this.stances, this.obstacles, this.levels);
     },
     methods: {
-        itsAMake(index: number) {
-            this.data[index].hasTried = true;
+        itsAMake() {
+            this.data[this.currentPlayer].hasTried = true;
             this.checkRound();
         },
-        itsAMiss(index: number) {
-            this.data[index].letterCount++;
-            this.data[index].letters += letters[this.data[index].letterCount-1];
-            if(this.data[index].letterCount !== 5) {
-                this.data[index].letters += '.';
+        itsAMiss() {
+            this.data[this.currentPlayer].letterCount++;
+            this.data[this.currentPlayer].letters += letters[this.data[this.currentPlayer].letterCount-1];
+            if(this.data[this.currentPlayer].letterCount !== 5) {
+                this.data[this.currentPlayer].letters += '.';
             } else {
-                this.data[index].isOut = true;
+                this.data[this.currentPlayer].isOut = true;
             }
 
-            this.data[index].hasTried = true;
+            this.data[this.currentPlayer].hasTried = true;
             this.checkRound();
         },
         checkRound(){
@@ -112,6 +108,12 @@ export default {
                     player.hasTried = player.isOut;
                 });
                 this.newTrick();
+                this.currentPlayer = 0;
+            } else {
+                this.currentPlayer++;
+                if(this.currentPlayer >= this.players.length) {
+                    this.currentPlayer = 0;
+                }
             }
         },
         restart(){
@@ -124,6 +126,7 @@ export default {
             });
 
             this.gameWinner = '';
+            this.currentPlayer = 0;
         },
         backToHomepage(){
             this.$router.push({ path: '/' });
