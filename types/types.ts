@@ -5,3 +5,11 @@ export interface Trick {
     noSides: boolean | undefined,
     mentions: string[] | undefined,
 }
+
+export interface SkatePlayer {
+    name: string, 
+    letters: string, 
+    letterCount: number, 
+    hasTried: boolean, 
+    isOut: boolean
+}
